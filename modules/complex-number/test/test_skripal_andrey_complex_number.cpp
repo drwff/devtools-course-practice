@@ -38,7 +38,6 @@ TEST(Skripal_Andrey_ComplexNumberTest, NotEqual_Test) {
     ComplexNumber n2(re2, im2);
 
     bool res = n1 != n2;
-
     ASSERT_TRUE(true, res);
 }
 
