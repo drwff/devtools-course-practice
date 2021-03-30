@@ -38,7 +38,7 @@ TEST(Skripal_Andrey_ComplexNumberTest, NotEqual_Test) {
     ComplexNumber n2(re2, im2);
 
     bool res = n1 != n2;
-    ASSERT_TRUE(true, res);
+    ASSERT_EQ(true, res);
 }
 
     typedef testing::TestWithParam<std::tuple<double, double, double, double>>
