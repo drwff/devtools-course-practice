@@ -4,7 +4,7 @@
 #include <tuple>
 #include "include/complex_number.h"
 
-TEST(Skripal_Andrey_ComplexNumberTest, Operations_Test) {
+TEST(Skripal_Andrey_ComplexNumberTest, OperationsPlusMinMult_Test) {
     ComplexNumber n1(15.0, 10.0);
     ComplexNumber n2(5.0, 7.0);
     ComplexNumber n3(8.0, 2.0);
@@ -38,7 +38,7 @@ TEST(Skripal_Andrey_ComplexNumberTest, NotEqual_Test) {
     ComplexNumber n2(re2, im2);
 
     bool res = n1 != n2;
-    ASSERT_EQ(true, res);
+    ASSERT_TRUE(res);
 }
 
     typedef testing::TestWithParam<std::tuple<double, double, double, double>>
@@ -64,8 +64,8 @@ TEST_P(Skripal_Andrey_ComplexNumberTest_Param, DivisionAndMultParam_Test) {
 
 INSTANTIATE_TEST_CASE_P(/**/, Skripal_Andrey_ComplexNumberTest_Param,
      testing::Combine(
-         testing::Values(71.0, 33.22),
-         testing::Values(201.0, 15.11),
-         testing::Values(666.0, 68.33),
-         testing::Values(124.0, 44.9)));
+         testing::Values(71.342, 33.22),
+         testing::Values(-201.69, 15.11),
+         testing::Values(666.458, -68.33),
+         testing::Values(137.12, 44.9)));
 
