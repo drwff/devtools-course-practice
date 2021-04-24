@@ -68,3 +68,12 @@ TEST(Intersection_line, Bounding_box) {
     bool tmp = l1.intersection(l2);
     ASSERT_FALSE(tmp);
 }
+
+TEST(Intersection_line, Equal_line) {
+    std::pair<int, int>  a(0, 5);
+    std::pair<int, int>  b(10, 0);
+    Line l1(a, b);
+    Line l2(a, b);
+    bool tmp = l1.intersection(l2);
+    ASSERT_TRUE(tmp);
+}
