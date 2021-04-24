@@ -11,10 +11,8 @@ TEST(Intersection_line, Check_intersect) {
     int d = -3;
     std::pair<int, int>  x(1, 1);
     std::pair<int, int>  y(2, 2);
-
     Line l(x, y);
-    bool tmp = l.intersect(a, b, c, d);
-    ASSERT_NO_THROW(tmp);
+    ASSERT_NO_THROW(l.intersect(a, b, c, d));
 }
 
 TEST(Intersection_line, Check_area) {
@@ -23,17 +21,14 @@ TEST(Intersection_line, Check_area) {
     std::pair<int, int>  c(2, 2);
     std::pair<int, int>  x(1, 1);
     std::pair<int, int>  y(2, 2);
-
     Line l(x, y);
-    int tmp = l.area(a, b, c);
-    ASSERT_NO_THROW(tmp);
+    ASSERT_NO_THROW(l.area(a, b, c));
 }
 
 TEST(Intersection_line, Check_constructor) {
     std::pair<int, int>  a(5, 5);
     std::pair<int, int>  b(5, 8);
-    Line l(a, b);
-    ASSERT_NO_THROW(l);
+    ASSERT_NO_THROW(Line(a, b));
 }
 
 TEST(Intersection_line, Intersect_true) {
@@ -44,7 +39,7 @@ TEST(Intersection_line, Intersect_true) {
     Line l1(a, b);
     Line l2(c, d);
     bool tmp = l1.intersection(l2);
-    ASSERT_TRUE(tmp);
+    ASSERT_EQ(true, tmp);
 }
 
 TEST(Intersection_line, Intersect_false) {
@@ -55,7 +50,7 @@ TEST(Intersection_line, Intersect_false) {
     Line l1(a, b);
     Line l2(c, d);
     bool tmp = l1.intersection(l2);
-    ASSERT_FALSE(tmp);
+    ASSERT_EQ(false, tmp);
 }
 
 TEST(Intersection_line, Bounding_box) {
@@ -66,7 +61,7 @@ TEST(Intersection_line, Bounding_box) {
     Line l1(a, b);
     Line l2(c, d);
     bool tmp = l1.intersection(l2);
-    ASSERT_FALSE(tmp);
+    ASSERT_EQ(false, tmp);
 }
 
 TEST(Intersection_line, Equal_line) {
@@ -75,5 +70,5 @@ TEST(Intersection_line, Equal_line) {
     Line l1(a, b);
     Line l2(a, b);
     bool tmp = l1.intersection(l2);
-    ASSERT_TRUE(tmp);
+    ASSERT_EQ(true, tmp);
 }
