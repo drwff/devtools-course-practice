@@ -1,6 +1,8 @@
 // Copyright 2021 Skripal Andrey
+
 #include <utility>
 #include <algorithm>
+
 #ifndef MODULES_INTERSECTION_LINE_INCLUDE_INTERSECTION_LINE_H_
 #define MODULES_INTERSECTION_LINE_INCLUDE_INTERSECTION_LINE_H_
 
@@ -18,5 +20,3 @@ class Line {
 };
 
 #endif  // MODULES_INTERSECTION_LINE_INCLUDE_INTERSECTION_LINE_H_
-
-
