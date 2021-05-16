@@ -5,8 +5,6 @@
 #include <string>
 #include <sstream>
 #include <utility>
-#include <cmath>
-#include <limits>
 
 #include "include/liap_app.h"
 #include "include/ilap.h"
@@ -18,7 +16,8 @@ void PointApp::help(const char* appname, const char* message) {
         std::string(message) +
         "This is a intersection line and plane application.\n\n" +
         "Please provide arguments in the following format:\n$"
-        + appname + "x1, y1, z1, ... x5, y5, z5 \n\n"  \
+        + appname + "x1, y1, z1, ... x5, y5, z5 \n\n"
+        + "The first two coordinates - line, the rest define the plane \n\n" \
 
         "Where all arguments are numbers. \n" \
         "Example: " + appname + " 1, 2, 3, ... 13, 14, 15 .\n\n";
