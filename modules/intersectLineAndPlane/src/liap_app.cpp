@@ -5,6 +5,7 @@
 #include <string>
 #include <sstream>
 #include <utility>
+#include <limits>
 
 #include "include/liap_app.h"
 #include "include/ilap.h"
